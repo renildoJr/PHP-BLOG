@@ -7,37 +7,44 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/content_editor.css">
     <script src="content_editor.js" defer></script>
-    <script src="https://kit.fontawesome.com/5034295430.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/5034295430.js" crossorigin="anonymous" defer></script>
 </head>
 <body>
-    <header class="page-header">
+    <header class="page-header general--padding">
         <nav class="page-header__navbar">
-            <ul class="menu">
-                <li class="menu__item menu__item--active"><a href="/" class="menu__link">Home</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Link A</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Link B</a></li>
-                <li class="menu__item menu__dropdown"><a href="#" class="menu__link">Dropdown 1</a>
-                    <ul class="menu__dropdown__submenu">
-                        <li class="menu__item"><a href="#" class="menu__link">Link A</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">Link A</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">Link A</a></li>
-                    </ul>
-                </li>
-                <li class="menu__item"><a href="#" class="menu__link">Link D</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Link E</a></li>
-                <li class="menu__item menu__dropdown"><a href="#" class="menu__link ">Dropdown 2</a>
-                    <ul class="menu__dropdown__submenu">
-                        <li class="menu__item"><a href="#" class="menu__link">Link A</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">Link A</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">Link A</a></li>
-                    </ul>
-                </li>
-                <li class="menu__item"><a href="#" class="menu__link">Link F</a></li>
-            </ul>
+           <div class="page-header__navbar__admin-area">
+                Teste
+           </div>
         </nav>
     </header>
 
-    <main id="page-main">
+    <aside class="page-sidebar general--padding">
+        <h2 class="page_sidebar__title">Menu</h2>
+        <ul class="menu">
+            <li class="menu__item menu__item--active"><a href="/" class="menu__link">Home</a></li>
+            <li class="menu__item"><a href="#" class="menu__link">Link A</a></li>
+            <li class="menu__item"><a href="#" class="menu__link">Link B</a></li>
+            <li class="menu__item menu__dropdown"><a href="#" class="menu__link">Dropdown 1</a>
+                <ul class="menu__dropdown__submenu">
+                    <li class="menu__item"><a href="#" class="menu__link">Link A</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">Link A</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">Link A</a></li>
+                </ul>
+            </li>
+            <li class="menu__item"><a href="#" class="menu__link">Link D</a></li>
+            <li class="menu__item"><a href="#" class="menu__link">Link E</a></li>
+            <li class="menu__item menu__dropdown"><a href="#" class="menu__link ">Dropdown 2</a>
+                <ul class="menu__dropdown__submenu">
+                    <li class="menu__item"><a href="#" class="menu__link">Link A</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">Link A</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">Link A</a></li>
+                </ul>
+            </li>
+            <li class="menu__item"><a href="#" class="menu__link">Link F</a></li>
+        </ul>
+    </aside>
+
+    <main class="page-main general--padding">
         <div class="container">
             <h1 class="page-title">New Post</h1>
             <div class="editor">
@@ -55,16 +62,16 @@
                 <div class="editor__content" contenteditable spellcheck="false"></div>
                 <div class="editor__counter">characters <span id="count">0</span></div>
             </div>
+            <form class="form-content" action="Post_Processing.php" method="post">
+                <input type="hidden" name="input_content" id="input_content">
+                <input class="btn btn--primary form-content__submit" type="submit" value="Publish">
+            </form>
         </div>
-        <form class="form-content" action="Post_Processing.php" method="post">
-            <input type="hidden" name="input_content" id="input_content">
-        </form>
     </main>
 
-    <footer class="page-footer">
+    <footer class="page-footer general--padding">
         copyright &copy; - 2023
     </footer>
 
 </body>
 </html>
-
