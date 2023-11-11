@@ -1,0 +1,226 @@
+:root {
+    /* Global */
+    font-size: 62.5%;
+
+    /* Theme Colors */
+    --color_primary: #E21B33;
+    --color_secondary: #0C0A3E;
+    --color_clear: #FFFFFF;
+    --color_dark: #141414;
+    --color_background: #FFFDFD;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.menu__link {
+    transition: .3s;
+}
+
+.btn {
+    cursor: pointer;
+    border: none;
+}
+
+.toggle {
+    background: none;
+    font-size: 2rem;
+    color: var(--color_clear);
+    border: none;
+}
+
+.gradient-line {
+    max-width: 1200px;
+    width: 100%;
+    margin: 1.5rem auto;
+    height: .1rem;
+    background: linear-gradient(90deg, rgba(87,9,18,1) 0%, rgba(226,27,51,1) 52%, rgba(87,9,18,1) 100%);
+}
+
+body {
+    background: var(--color_background);
+    font-family: 'Roboto', sans-serif;
+    color: var(--color_dark);
+    font-size: 1.4rem;
+}
+
+.container {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 2.5rem;
+}
+
+/* Page Header */
+.page-header__topbar .container, 
+.page-header__navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 3.5rem;
+}
+
+/* Page Header > Topbar */
+.page-header__topbar {
+    background: var(--color_dark);
+}
+
+.page-header__topbar .toggle {
+    transition: .3s;
+}
+
+.page-header__topbar .toggle:hover {
+    color: var(--color_primary);
+}
+
+.page-header__topbar .menu__mega-menu {
+    position: absolute;
+    top: 3.5rem;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+    background: var(--color_dark);
+    padding-bottom: 2rem;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: space-between;
+    display: none;
+}
+
+.page-header__topbar .menu__mega-menu .container {
+    display: flex;
+    border: 200px;
+    align-items: flex-start;
+}
+
+.page-header__topbar .menu__mega-menu .mega-menu__column .column-title {
+    color: var(--color_primary);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.page-header__topbar .menu__mega-menu .mega-menu__column .menu__item {
+    margin-bottom: 1rem;
+}
+.page-header__topbar .menu__mega-menu .mega-menu__column .menu__link {
+    color: var(--color_clear);
+    font-weight: 100;
+}
+
+.page-header__topbar .menu__mega-menu .mega-menu__column .menu__link:hover {
+    color: var(--color_primary);
+}
+
+.page-header__topbar .info-text {
+    color: var(--color_clear);
+}
+
+.page-header__topbar .social-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.page-header__topbar .social-links a {
+    color: var(--color_clear);
+    transition: .3s;
+}
+
+.page-header__topbar .social-links a:hover {
+    color: var(--color_primary);
+}
+
+.page-header__topbar .user {
+    position: relative;
+}
+
+.page-header__topbar .user .toggle {
+    font-size: 1.5rem;
+}
+
+.page-header__topbar .user .toggle span {
+    font-family: 'Roboto';
+    font-weight: 300;
+    margin-left: 8px;
+}
+
+.page-header__topbar .user .menu {
+    position: absolute;
+    top: calc(100% + .9rem);
+    background: var(--color_dark);
+    min-width: 10rem;
+    z-index: 1;
+    box-shadow: 2px 2px 5px 2px #00000027;
+    display: none;
+}
+
+.page-header__topbar .user .menu__link {
+    padding: 1rem;
+    display: block;
+    color: var(--color_clear);
+}
+
+.page-header__topbar .user .menu__link:hover {
+    color: var(--color_primary);
+}
+
+.page-header__topbar .user .menu__link i {
+   color: var(--color_primary);
+   margin-left: 1rem;
+}
+
+/* Page Header > Navbar */
+.page-header__navbar {
+    position: relative;
+    background: var(--color_primary);
+    box-shadow: 2px 2px 5px 2px #00000027;
+}
+
+.page-header__navbar .container {
+    min-height: 4.5rem;
+}
+
+.page-header__navbar .logo-area .site-title {
+    font-size: 1.8rem;
+    color: var(--color_clear);
+}
+
+.page-header__navbar .menu {
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.page-header__navbar .menu__item {
+   margin: 1rem;
+}
+
+.page-header__navbar .menu__item--active > .menu__link ,
+.page-header__navbar .menu__item:hover > .menu__link {
+   color: var(--color_dark);
+}
+
+.page-header__navbar .menu__link {
+   color: var(--color_clear);
+   font-weight: 700;
+}
+
+.page-header__navbar .menu__link::first-letter {
+    text-transform: uppercase;
+}
+
+.page-header__navbar .toggle {
+   display: none;
+}
+
+.page-header__navbar .dropdown__item .dropdown__submenu {
+   display: none;
+}
