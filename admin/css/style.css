@@ -69,7 +69,6 @@ body {
     grid-area: header;
     background: var(--primary1);
     min-height: 50px;
-
 }
 
 .page-header__navbar {
