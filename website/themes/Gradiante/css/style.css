@@ -218,9 +218,35 @@ body {
 }
 
 .page-header__navbar .toggle {
-   display: none;
+    display: none;
 }
 
 .page-header__navbar .dropdown__item .dropdown__submenu {
-   display: none;
+    display: none;
+}
+
+.page-header__navbar .searchform {
+    display: flex;
+}
+
+.page-header__navbar .searchform .btn {
+    background: none;
+    margin: 0 1rem;
+    font-size: 1.2rem;
+    color: var(--color_clear);
+}
+
+.page-header__navbar .searchform #searchbar {
+    border: none;
+    border-radius: 10px;
+    padding: .5rem 1rem;
+    display: none;
+    transition: .3s ease-in-out;
+
+    width: 0;
+}
+
+.page-header__navbar .searchform.searchbar--active {
+    width: 100%;
+    display: block;
 }
