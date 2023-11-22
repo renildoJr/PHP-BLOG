@@ -194,6 +194,7 @@ body {
 .page-header__navbar .logo-area .site-title {
     font-size: 1.8rem;
     color: var(--color_clear);
+    margin-right: 3rem;
 }
 
 /* Page Header > Navbar > Menu */
@@ -230,14 +231,11 @@ body {
 
 /* Page Header > Navbar > Searchbox  */
 .page-header__navbar .searchform {
-    max-width: 220px;
-    width: 100%;
+    min-width: 120px;
+    width: calc(100% / 6.5);
     display: flex;
     justify-content: right;
     overflow: hidden;
-
-    border: 1px solid;
-    
 }
 
 .page-header__navbar .searchform .btn {
