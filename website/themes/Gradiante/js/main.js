@@ -1,3 +1,6 @@
-import { searchBox } from "./functions.js";
+import { searchBox, menuDropdownOnClick } from "./functions.js";
 
 searchBox();
+menuDropdownOnClick();
+
+addEventListener("resize", menuDropdownOnClick);

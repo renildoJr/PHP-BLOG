@@ -31,3 +31,24 @@ export function searchBox() {
     btnSearchOpen.addEventListener("click", searchboxOpen);
     btnSearchClose.addEventListener("click", searchboxClose);
 }
+
+export function menuDropdownOnClick() {
+    const navbarMenuDropdownLinks = document.querySelectorAll(".dropdown__item > a");
+
+    navbarMenuDropdownLinks.forEach(menu_link => {
+        
+        if(document.body.clientWidth <= 900) {
+            menu_link.addEventListener("click", e => {
+                e.preventDefault();
+                menu_link.parentElement.classList.toggle("menu__item--active");
+                menu_link.nextElementSibling.classList.toggle("submenu--active");
+            });        
+        }
+        // else {
+        //     menu_link.parentElement.classList.remove("menu__item--active");
+        //         menu_link.nextElementSibling.classList.remove("submenu--active");
+        // }
+        
+
+    });
+}
