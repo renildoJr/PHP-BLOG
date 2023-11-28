@@ -12,6 +12,7 @@
     --color_dark2: #313131;
     --color_dark3: #494949;
     --color_background: --color_clear2;
+    --color_grey: #E5E5E5;
 }
 
 * {
@@ -150,22 +151,145 @@ Header > Navbar
     margin: 5rem 0;
 }
 
+
 /*
-----------------------------------
-Main > Left Content > Slider 
-----------------------------------
+-------------------------------
+Main > Left Content > Slider
+-------------------------------
 */
-
-.page-main .slider .slider__post {
-
-    max-width: 700px;
-
-    border: 1px solid red;
+.overlay {
+    background: hsla(0, 0%, 0%, 0.314);
 }
 
-.page-main .slider__post__image {
+.slider {
+    display: flex;
+    max-width: 700px;
+    height: 400px;
+    position: relative;
+
+    overflow: hidden;
+    /* border: 4px solid red; */
+}
+
+.slider__posts {
+    width: 100%;
+    /* height: 100%; */
+
+    display: flex;
+    position: relative;
+
+    /* border: 4px solid; */
+
+}
+
+/*
+--------------------------------------
+Main > Left Content > Slider > Post
+--------------------------------------
+*/
+.slider__post {
+    width: 100%;
+    flex: 0 0 auto;
+    
+    /* position: relative; */
+
+}
+
+
+.slider__post:hover .slider__post__description p {
+    display: block;
+}
+
+.slider__post:hover .slider__post__image {
+    scale: 1.1;
+}
+
+.slider__post__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     position: absolute;
     z-index: -1;
-    width: 100%;
+    transition: .5s ease-in-out;
+}
 
+.slider__post__description {
+    padding: 2rem;
+    bottom: 0;
+    position: absolute;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+
+.slider__post__description .catg {
+    background: #C1BB16;
+    color: var(--color_clear);
+    padding: .5rem;
+}
+
+.slider__post__description i {
+    color: var(--color_primary);
+    margin-right: 1rem;
+}
+
+.slider__post__description .publish-date {
+    color: var(--color_clear);
+    margin-left: 2rem;
+}
+
+.slider__post__description .author {
+    display: inline;
+    margin-left: 2rem;
+}
+
+.slider__post__description .author a {
+    color: var(--color_clear);
+}
+
+.slider__post__description h3 {
+    font-size: 3.6rem;
+    color: var(--color_clear);
+    margin: 1rem 0;
+}
+
+.slider__post__description p {
+    font-size: 1.8rem;
+    color: var(--color_grey);
+
+    transition: .3s ease-in-out;
+    display: none;
+}
+
+/*
+-----------------------------------------
+Main > Left Content > Slider > Controls
+-----------------------------------------
+*/
+.page-main .slider__controls {
+
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 3rem;
+}
+
+.page-main .slider__controls .dot {
+    width: 1.8rem;
+    height: 1.8rem;
+    background: var(--color_grey);
+    border: none;
+    border-radius: .4rem;
+    transition: .3s ease-in-out;
+}
+
+.page-main .slider__controls .dot.dot--active,
+.page-main .slider__controls .dot:hover {
+    background: var(--color_primary);
+    width: 4rem;
 }
