@@ -157,29 +157,20 @@ Header > Navbar
 Main > Left Content > Slider
 -------------------------------
 */
-.overlay {
-    background: hsla(0, 0%, 0%, 0.314);
-}
-
 .slider {
     display: flex;
     max-width: 700px;
     height: 400px;
     position: relative;
-
     overflow: hidden;
-    /* border: 4px solid red; */
+
+    /* z-index: 4; */
 }
 
 .slider__posts {
     width: 100%;
-    /* height: 100%; */
-
     display: flex;
     position: relative;
-
-    /* border: 4px solid; */
-
 }
 
 /*
@@ -189,76 +180,101 @@ Main > Left Content > Slider > Post
 */
 .slider__post {
     width: 100%;
+    height: 100%;
     flex: 0 0 auto;
-    
-    /* position: relative; */
-
-}
-
-
-.slider__post:hover .slider__post__description p {
-    display: block;
+    position: relative;
+    transition: .3s ease-in-out;
 }
 
 .slider__post:hover .slider__post__image {
     scale: 1.1;
 }
 
+.slider__post:hover .slider__post__content {
+    top: 0;
+}
+
+.slider__post:hover .slider__post__content .visible-info {
+    position: static;
+    padding: 0;
+    background: none;
+
+}
+
 .slider__post__image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    position: absolute;
     z-index: -1;
     transition: .5s ease-in-out;
 }
 
-.slider__post__description {
-    padding: 2rem;
-    bottom: 0;
+.slider__post__content {
     position: absolute;
-    margin-bottom: 2rem;
     width: 100%;
+    height: 100%;
+    transition: .7s ease-in-out;
+    top: 100%;
+    background: hsla(0, 0%, 0%, 0.555);
+    padding: 2rem;
+
 }
 
+.slider__post__content .post__link {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+}
 
-.slider__post__description .catg {
+.slider__post__content .visible-info {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    background: hsla(0, 0%, 0%, 0.555);
+    padding: 2rem 2rem 5rem;
+
+}
+
+.slider__post__content .visible-info .catg {
     background: #C1BB16;
     color: var(--color_clear);
     padding: .5rem;
+    font-weight: 800;
+
+    z-index: 3;
 }
 
-.slider__post__description i {
+.slider__post__content .visible-info i {
     color: var(--color_primary);
     margin-right: 1rem;
 }
 
-.slider__post__description .publish-date {
+.slider__post__content .visible-info .publish-date {
     color: var(--color_clear);
     margin-left: 2rem;
 }
 
-.slider__post__description .author {
+.slider__post__content .visible-info .author {
     display: inline;
     margin-left: 2rem;
 }
 
-.slider__post__description .author a {
+.slider__post__content .visible-info .author a {
     color: var(--color_clear);
 }
 
-.slider__post__description h3 {
+.slider__post__content .visible-info h3 {
     font-size: 3.6rem;
     color: var(--color_clear);
     margin: 1rem 0;
 }
 
-.slider__post__description p {
+.slider__post__content p {
     font-size: 1.8rem;
     color: var(--color_grey);
-
     transition: .3s ease-in-out;
-    display: none;
 }
 
 /*
@@ -267,7 +283,6 @@ Main > Left Content > Slider > Controls
 -----------------------------------------
 */
 .page-main .slider__controls {
-
     position: absolute;
     bottom: 0;
     width: 100%;

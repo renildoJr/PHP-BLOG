@@ -52,3 +52,37 @@
 
 //     });
 // }
+
+// Slider
+export function slider(SlideList, ControlsContainer, IsAutomatic = true) {
+    let position = 0;
+    let interval = IsAutomatic ? setInterval(changePosition, 3000) : false;
+    const dotList = SlideList.map(dot => {
+        dot = document.createElement("button");
+        dot.setAttribute("class", "dot btn");
+        ControlsContainer.appendChild(dot);
+    });
+
+    function changePosition() {
+        if(position > SlideList.length * 100 - 100) {
+            position = 0;
+        }
+        
+        SlideList.forEach(slide => slide.style.right = position+"%");
+        position += 100
+    }
+
+    SlideList.forEach(slide => slide.addEventListener("mouseenter", () => {clearInterval(interval)}))
+    // SlideList.forEach(slide => slide.addEventListener("mouseout", () => {setTimeout(interval)}))
+
+
+    // changePosition()
+
+
+    
+
+    // Mouseenter Para o Slider
+    // Mouseout continua o slider
+
+
+}
