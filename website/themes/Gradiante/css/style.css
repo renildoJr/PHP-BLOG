@@ -4,6 +4,7 @@
 
     /* Theme Colors */
     --color_primary: #E21B33;
+    --color_primary-transp: #e21b3288;
     --color_secondary: #0C0A3E;
     --color_clear: #FFFFFF;
     --color_clear2: #FFFDFD;
@@ -153,6 +154,17 @@ Header > Navbar
 
 
 /*
+-----------------------
+Main > Left Content
+-----------------------
+*/
+.left-content {
+    display: flex;
+    gap: 0 2rem;
+}
+
+
+/*
 -------------------------------
 Main > Left Content > Slider
 -------------------------------
@@ -178,7 +190,11 @@ Main > Left Content > Slider
 Main > Left Content > Slider > Post
 --------------------------------------
 */
-.slider__post {
+.slider .post:hover .post__content {
+    top: 0;
+}
+
+.post {
     width: 100%;
     height: 100%;
     flex: 0 0 auto;
@@ -186,22 +202,17 @@ Main > Left Content > Slider > Post
     transition: .3s ease-in-out;
 }
 
-.slider__post:hover .slider__post__image {
+.post:hover .post__image {
     scale: 1.1;
 }
 
-.slider__post:hover .slider__post__content {
-    top: 0;
-}
-
-.slider__post:hover .slider__post__content .visible-info {
+.post:hover .post__content .visible-info {
     position: static;
     padding: 0;
     background: none;
-
 }
 
-.slider__post__image {
+.post__image {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -209,7 +220,7 @@ Main > Left Content > Slider > Post
     transition: .5s ease-in-out;
 }
 
-.slider__post__content {
+.post__content {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -220,7 +231,7 @@ Main > Left Content > Slider > Post
 
 }
 
-.slider__post__content .post__link {
+.slider .post__content .post__link {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -228,7 +239,7 @@ Main > Left Content > Slider > Post
     left: 0;
 }
 
-.slider__post__content .visible-info {
+.post__content .visible-info {
     position: absolute;
     bottom: 100%;
     left: 0;
@@ -237,7 +248,7 @@ Main > Left Content > Slider > Post
 
 }
 
-.slider__post__content .visible-info .catg {
+.post__content .catg {
     background: #C1BB16;
     color: var(--color_clear);
     padding: .5rem;
@@ -246,32 +257,32 @@ Main > Left Content > Slider > Post
     z-index: 3;
 }
 
-.slider__post__content .visible-info i {
+.post__content i {
     color: var(--color_primary);
     margin-right: 1rem;
 }
 
-.slider__post__content .visible-info .publish-date {
+.post__content .publish-date {
     color: var(--color_clear);
     margin-left: 2rem;
 }
 
-.slider__post__content .visible-info .author {
+.post__content .visible-info .author {
     display: inline;
     margin-left: 2rem;
 }
 
-.slider__post__content .visible-info .author a {
+.post__content .author a {
     color: var(--color_clear);
 }
 
-.slider__post__content .visible-info h3 {
+.post__content h3 {
     font-size: 3.6rem;
     color: var(--color_clear);
     margin: 1rem 0;
 }
 
-.slider__post__content p {
+.post__content p {
     font-size: 1.8rem;
     color: var(--color_grey);
     transition: .3s ease-in-out;
@@ -308,3 +319,60 @@ Main > Left Content > Slider > Controls
     background: var(--color_primary);
     width: 4rem;
 }
+
+/*
+-----------------------------------------
+Main > Left Content > slider Slidebar
+-----------------------------------------
+*/
+
+.slider-sidebar {
+    max-width: 21.5rem;
+}
+
+.slider-sidebar .post {
+    overflow: hidden;
+    min-width: 200px;
+    height: 125px;
+    margin-bottom: 1.3rem;
+}
+
+.slider-sidebar .post:hover > .post__content {
+    background: var(--color_primary-transp);
+}
+
+.slider-sidebar .post__content {
+    background: #14141463;
+    top: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider-sidebar .post__content .catg {
+    height: 2.6rem;
+}
+
+.slider-sidebar .post__content .publish-date {
+    margin: 5px;
+}
+
+.slider-sidebar .post__content  h3 {
+    font-size: 1.8rem;
+    margin: 1rem 0;
+    position: absolute;
+    bottom: 0;
+    padding: 1rem;
+}
+
+.slider-sidebar .post__content .post__link {
+    width: 100%;
+    height: 80%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 5;
+}
+
+
+/* POST GLOBAL */

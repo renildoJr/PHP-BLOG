@@ -54,35 +54,56 @@
 // }
 
 // Slider
-export function slider(SlideList, ControlsContainer, IsAutomatic = true) {
+export function slider(SlideList, ControlsContainer, IsAutomatic = false) {
     let position = 0;
     let interval = IsAutomatic ? setInterval(changePosition, 3000) : false;
-    const dotList = SlideList.map(dot => {
-        dot = document.createElement("button");
-        dot.setAttribute("class", "dot btn");
-        ControlsContainer.appendChild(dot);
-    });
+    let dotList = [];
+
+    (function renderDots() {
+        SlideList.map(dot => {
+            dot = document.createElement("button");
+            dot.setAttribute("class", "dot btn");
+            ControlsContainer.appendChild(dot);
+        });
+
+        return dotList = Array.from(document.getElementsByClassName("dot"));
+
+    }());
 
     function changePosition() {
         if(position > SlideList.length * 100 - 100) {
             position = 0;
         }
         
+        addRemoveClasses(dotList[position / 100], dotList, "dot--active");
+        
         SlideList.forEach(slide => slide.style.right = position+"%");
         position += 100
+
+
     }
 
     SlideList.forEach(slide => slide.addEventListener("mouseenter", () => {clearInterval(interval)}))
     // SlideList.forEach(slide => slide.addEventListener("mouseout", () => {setTimeout(interval)}))
 
+    dotList.forEach((dot, index) => {
+        dot.addEventListener("click", () => {
+            position = index * 100;
+            addRemoveClasses(dot, dotList, "dot--active");
+            changePosition();
+        });
+    })
+
+    dotList[0].classList.add("dot--active");
 
     // changePosition()
-
-
-    
 
     // Mouseenter Para o Slider
     // Mouseout continua o slider
 
+}
 
+function addRemoveClasses(CurrentElement, ElementList, ElementClass) {
+    ElementList.map(element => element.classList.remove(ElementClass));
+    CurrentElement.classList.add(ElementClass);
 }
