@@ -22,15 +22,9 @@
     box-sizing: border-box;
 }
 
-body {
-    font-size: 1.4rem;
-    background: var(--color_background);
-    color: var(--color_dark);
-    font-family: 'Roboto', Arial;
-}
-
 .btn {
     cursor: pointer;
+    border: none;
 }
 
 .toggle {
@@ -38,6 +32,29 @@ body {
     color: var(--color_clear);
     border: none;
     font-size: 1.8rem;
+}
+
+.section-title {
+    font-size: 3.4rem;
+    margin-bottom: 2.5rem;
+    font-weight: 900;
+    border-bottom: 3px solid var(--color_primary);
+}
+
+.post .publish-date i {
+    color: var(--color_primary);
+    margin-right: 1rem;
+}
+
+body {
+    font-size: 1.4rem;
+    background: var(--color_background);
+    color: var(--color_dark);
+    font-family: 'Roboto', Arial;
+}
+
+section {
+    margin-bottom: 2rem;
 }
 
 li {
@@ -152,6 +169,11 @@ Header > Navbar
     margin: 5rem 0;
 }
 
+.page-main .container {
+    display: grid;
+    gap: 0 2rem;
+    grid-template-columns: 80% 20%;
+}
 
 /*
 -----------------------
@@ -171,12 +193,11 @@ Main > Left Content > Slider
 */
 .slider {
     display: flex;
-    max-width: 700px;
+    max-width: 1000px;
+    width: 100%;
     height: 400px;
     position: relative;
     overflow: hidden;
-
-    /* z-index: 4; */
 }
 
 .slider__posts {
@@ -245,21 +266,18 @@ Main > Left Content > Slider > Post
     left: 0;
     background: hsla(0, 0%, 0%, 0.555);
     padding: 2rem 2rem 5rem;
-
 }
 
-.post__content .catg {
+.post .catg {
     background: #C1BB16;
     color: var(--color_clear);
     padding: .5rem;
     font-weight: 800;
-
     z-index: 3;
 }
 
 .post__content i {
     color: var(--color_primary);
-    margin-right: 1rem;
 }
 
 .post__content .publish-date {
@@ -357,7 +375,7 @@ Main > Left Content > slider Slidebar
     margin: 5px;
 }
 
-.slider-sidebar .post__content  h3 {
+.slider-sidebar .post h3 {
     font-size: 1.8rem;
     margin: 1rem 0;
     position: absolute;
@@ -374,5 +392,32 @@ Main > Left Content > slider Slidebar
     z-index: 5;
 }
 
+/*
+-----------------------------------------
+Main > Right Content > Sidebar
+-----------------------------------------
+*/
 
-/* POST GLOBAL */
+.sidebar .post {
+    position: relative;
+    display: block;
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid var(--color_clear_gray);
+}
+
+.sidebar .post .publish-date {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.sidebar .post h3 {
+    font-size: 1.8rem;
+    font-weight: 900;
+    margin: 1rem 0;
+}
+
+.sidebar .post__link {
+    color: var(--color_dark);
+}
+
