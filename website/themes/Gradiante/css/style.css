@@ -14,12 +14,25 @@
     --color_dark3: #494949;
     --color_background: --color_clear2;
     --color_grey: #E5E5E5;
+    --color_section-post__description: #6B6B6B;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.on {
+    display: none;
+}
+
+.display--on {
+    display: content;
+}
+
+.hide--off {
+    display: none;
 }
 
 .btn {
@@ -41,8 +54,11 @@
     border-bottom: 3px solid var(--color_primary);
 }
 
-.post .publish-date i {
+.post i {
     color: var(--color_primary);
+}
+
+.post .publish-date i {
     margin-right: 1rem;
 }
 
@@ -180,11 +196,15 @@ Header > Navbar
 Main > Left Content
 -----------------------
 */
-.left-content {
+/* .left-content {
+    display: flex;
+    gap: 0 2rem;
+} */
+
+.left-content .top-posts {
     display: flex;
     gap: 0 2rem;
 }
-
 
 /*
 -------------------------------
@@ -241,7 +261,8 @@ Main > Left Content > Slider > Post
     transition: .5s ease-in-out;
 }
 
-.post__content {
+.slider__posts .post__content,
+.slider-sidebar .post__content {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -394,9 +415,97 @@ Main > Left Content > slider Slidebar
 
 /*
 -----------------------------------------
+Main > Left Content > 
+-----------------------------------------
+*/
+
+.left-content .section-title {
+    display: inline-block;
+    min-width: 150px;
+}
+
+.left-content section .posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5rem;
+}
+
+.left-content section .post {
+    height: 342px;
+    
+}
+
+.left-content section .post:nth-of-type(1n+4) {
+    display: none;
+}
+
+.left-content section .post.post--visible {
+    display: block;
+}
+
+.left-content section .post__image-container {
+    position: relative;
+    overflow: hidden;
+
+    height: 145px;
+}
+
+.left-content section .post__image-container .catg {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.left-content section .post__image-container .post__image {
+    height: 145px;
+}
+
+.left-content section .post__content h3 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--color_dark);
+}
+
+.left-content section .post__content p {
+    color: var(--color_section-post__description);
+}
+
+.left-content section .post footer {
+    display: flex;
+    margin: 1rem 0;
+    justify-content: space-between;
+}
+
+.left-content section .show-more {
+    color: var(--color_dark2);
+    display: flex;
+    margin: 3.5rem 20%;
+    justify-content: center;
+    align-items: center;
+    background: var(--color_section-post__description);
+    height: .2rem;
+
+}
+
+.left-content section .show-more .btn {
+    color: var(--color_primary);
+    padding: 0 1rem;
+    background: var(--color_clear);
+}
+
+
+/*
+-----------------------------------------
 Main > Right Content > Sidebar
 -----------------------------------------
 */
+
+.sidebar .post {
+    position: relative;
+    display: block;
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid var(--color_clear_gray);
+}
 
 .sidebar .post {
     position: relative;
@@ -421,3 +530,26 @@ Main > Right Content > Sidebar
     color: var(--color_dark);
 }
 
+.sidebar .social-links {
+    background: var(--color_dark);
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.sidebar .social-links a {
+    border: 2px solid #c5c5c55d;
+    color: var(--color_clear);
+    font-size: 3.2rem;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 1.5rem;
+}
+
+.sidebar .adv {
+    width: 100%;
+    height: 580px;
+
+    background: rgb(70, 0, 128);
+}

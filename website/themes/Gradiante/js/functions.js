@@ -107,3 +107,15 @@ function addRemoveClasses(CurrentElement, ElementList, ElementClass) {
     ElementList.map(element => element.classList.remove(ElementClass));
     CurrentElement.classList.add(ElementClass);
 }
+
+export function elementToggle(btnToggle, content, isContentList = false, classList) {
+    btnToggle.addEventListener("click", () => {
+        if(isContentList) {
+            content.forEach(element => {
+                element.classList.toggle(classList)
+            });
+        }else {
+            content.classList.toggle(classList);
+        }
+    });
+}
