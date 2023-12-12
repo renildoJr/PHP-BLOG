@@ -10,6 +10,6 @@ slider(Array.from(document.getElementsByClassName("slider__post")), document.get
 const btnShowMoreList = document.querySelectorAll(".show-more .btn");
 
 btnShowMoreList.forEach((btn, index) => {
-   const posts = Array.from(document.querySelectorAll(".left-content section .posts")[index].children);
+   const posts = Array.from(document.querySelectorAll("#top_left-content section .posts")[index].children);
    elementToggle(btn, posts, true, "post--visible");
 });
