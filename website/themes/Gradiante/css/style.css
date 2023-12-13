@@ -547,11 +547,14 @@ Main > Right Content > Sidebar
     border-radius: 1.5rem;
 }
 
-.sidebar .adv {
+.adv {
     width: 100%;
-    height: 580px;
 
-    background: rgb(70, 0, 128);
+    background: #4D5DE5;
+}
+
+.sidebar .adv {
+    height: 580px;
 }
 
 
@@ -579,6 +582,7 @@ Main > Video Section
 
 #video-section video {
     width: 100%;
+
     border: 1px solid red;
 }
 
@@ -590,19 +594,30 @@ Main > Bottom Left Content
 #bottom_left-content section .posts {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
 }
 
 #bottom_left-content section .posts .post {
-    /* width: 115px; */
+    max-width: 450px;
     height: 115px;
+    display: flex;
 
-    border: 1px solid red;
+}
+
+#bottom_left-content section .post h3 {
+    color: var(--color_dark);
+    font-size: 2rem;
 }
 
 #bottom_left-content section .post__image-container {
-    width: 115px;
+    max-width: 220px;
     height: 100%;
     overflow: hidden;
+    margin-right: 1rem;
+}
+
+#bottom_left-content section .post__image-container img {
+    width: 100%;
 }
 
 #bottom_left-content section .post__image-container .catg {
@@ -611,3 +626,76 @@ Main > Bottom Left Content
     bottom: 0;
 }
 
+#bottom_left-content section .post__content .author a,
+#bottom_left-content section .post__content .publish-date {
+   color: var(--color_dark);
+}
+
+#bottom_left-content section .post__content .publish-date {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+ 
+#bottom_left-content .adv {
+    height: 180px;
+    margin: 50px 0
+}
+ 
+/*
+----------------------------------------------
+Main > Bottom Right Content Sidebar Comments
+----------------------------------------------
+*/
+
+.sidebar #sidebar-comments li {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #6b6b6b2c;
+}
+
+.sidebar #sidebar-comments li:last-child {
+    margin-bottom: none;
+}
+
+.sidebar #sidebar-comments li a {
+    color: var(--color_dark3);
+    font-weight: 600;
+}
+
+.sidebar #sidebar-comments li a span {
+    color: var(--color_primary);
+}
+
+/*
+-------------------------------------------------------
+Main > Bottom Right Content Sidebar Most Read List
+-------------------------------------------------------
+*/
+.sidebar #sidebar-most-read li {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 900;
+}
+
+.sidebar #sidebar-most-read li a {
+    color: var(--color_dark);
+}
+
+/*
+-------------------------------------------------------
+Main > Bottom Right Content Sidebar Tags
+-------------------------------------------------------
+*/
+.sidebar .tags {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.sidebar .tags .catg {
+   padding: 1rem;
+   font-weight: 800;
+   color: var(--color_clear);
+   text-align: center;
+}
