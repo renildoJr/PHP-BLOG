@@ -699,3 +699,80 @@ Main > Bottom Right Content Sidebar Tags
    color: var(--color_clear);
    text-align: center;
 }
+
+/*
+---------
+Footer
+---------
+*/
+.page-footer {
+    background: var(--color_dark);
+    min-height: 100px;
+}
+
+.page-footer .container {
+    border-bottom: 4px solid var(--color_primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.page-footer .copyright {
+    color: var(--color_clear);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 
+---------------------
+Footer > Columns 
+---------------------
+*/
+.footer__column {
+    margin: 2rem 0;
+}
+
+.footer__column__title {
+    color: var(--color_clear2);
+}
+
+.footer__column ul li a {
+    color: var(--color_dark3);
+}
+
+.footer__column i {
+    color: var(--color_primary);
+    margin-right: 1rem;
+}
+
+.footer__column h5 {
+    color: var(--color_clear);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.footer__column h6 {
+    color: var(--color_clear);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.footer__column .logo {
+    margin: 2rem 0;
+}
+
+.footer__column input {
+    border-bottom: 1px solid var(--color_primary);
+    background: var(--color_dark3);
+    color: var(--color_clear2);
+    padding: 1rem;
+    border: none;
+}
+
+.footer__column input[type=submit] {
+    /* border-bottom: 1px solid var(--color_primary); */
+    background: var(--color_primary);
+    font-weight: 700;
+}
