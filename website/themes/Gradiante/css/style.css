@@ -74,9 +74,14 @@
 .line-text span {
     color: var(--color_dark2);
     background: var(--color_clear);
-    padding: 0 1rem;
+    padding: 0 2rem;
     font-size: 2.4rem;
     font-weight: 100;
+}
+
+.line-text span div {
+    font-size: 1.8rem;
+    text-align: center;
 }
 
 body {
@@ -116,6 +121,7 @@ img {
     max-width: 1300px;
     margin: 0 auto;
     padding: 0 2.5rem;
+    position: relative;
 }
 
 /* Header */
@@ -752,6 +758,7 @@ Footer
     background: var(--color_dark);
     /* width: 100%; */
     min-height: 100px;
+    margin-top: 50px;
 
     
 }
@@ -823,12 +830,50 @@ Footer > Columns
     font-weight: 700;
 }
 
+/*
+--------------------------
+Single Post > Share Post
+--------------------------
+*/
+.share-post {
+    display: flex;
+    gap: 12px;
+    position: absolute;
+    top: -60px;
+    right: 0;
+    margin-right: 150px;
+}
+
+.share-post .btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    font-size: 2rem;
+    box-shadow: 2px 2px 6px 2px #00000041;
+    color: var(--color_clear);
+}
+
+.share-post .btn-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.share-post .btn-more .dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--color_clear);
+
+}
 
 /*
 -----------------------
-Single Post 
+Single Post > Post
 -----------------------
 */
+
 .single-post h1 {
     font-size: 6.4rem;
     font-weight: 900;
@@ -837,4 +882,94 @@ Single Post
 .single-post p {
     font-size: 3.6rem;
     color: #8D8D8D;
+}
+
+/* 
+-----------------------------
+Single Post > Posts Section
+-----------------------------
+*/
+#single-post_container .posts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+#single-post_container .posts .post__image-container {
+    height: 200px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+#single-post_container .posts .post__image-container img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#single-post_container .posts .post__image-container .catg {
+    width: 100px;
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    font-size: 2.4rem;
+}
+
+#single-post_container .posts h3 {
+    color: var(--color_dark);
+    font-size: 2.4rem;
+}
+
+#single-post_container .posts .publish-date  {
+    color: var(--color_dark);
+    margin: 0;
+}
+
+#single-post_container .posts .author {
+    display: inline;
+    margin-left: 20px;
+}
+
+#single-post_container .posts .author i {
+    margin-right: 10px;
+}
+
+#single-post_container .posts .author a {
+    color: var(--color_dark);
+}
+
+/* 
+-----------------
+404 Page > Main
+-----------------
+*/
+#container_page404 {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.info {
+    /* position: relative; */
+}
+
+.info__description {
+    position: relative;
+    top: -170px;
+    left: 70px;
+    max-width: 470px;
+}
+
+.info__description h1 {
+    font-size: 9rem;
+}
+
+.info__description h2 {
+    font-size: 3.6rem;
+}
+
+.info__description p {
+    margin: 0;
+    font-size: 1.8rem;
 }

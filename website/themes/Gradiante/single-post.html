@@ -62,11 +62,11 @@
                     <ul class="menu">
                         <li><a href="/">Home</a></li>
                         <li><a class="link--active" href="single-post.html">Single Post</a></li>
-                        <li><a href="#">World</a></li>
-                        <li class="dropdown"><a href="#">Latest</a></li>
-                        <li><a href="#">Technology</a></li>
-                        <li><a href="#">Trends</a></li>
-                        <li class="dropdown"><a  href="#">More</a></li>
+                        <li><a href="login.html">login</a></li>
+                        <li class="dropdown"><a href="signup.html">Signup</a></li>
+                        <li><a href="404.html">404</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li class="dropdown"><a  href="category.html">Category</a></li>
                     </ul>
                     <!-- Navbar > Menu end -->
                     
@@ -87,11 +87,28 @@
 
     <!-- Main -->
     <main>
-        <div class="container">
+        <div class="container" id="single-post_container">
+            <!-- Share Post  -->
+            <div class="share-post">
+                <button style="background: #13046F" class="btn fa-brands fa-facebook-f"></button>
+                <button style="background: #0C99D6" class="btn fa-brands fa-twitter"></button>
+                <button style="background: #0CD651" class="btn fa-brands fa-whatsapp"></button>
+                <button style="background: #DF005E" class="btn btn-more">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </button>
+            </div>
+            <!-- Share Post end -->
 
             <!-- Single Post -->
             <article class="single-post">
-                <div class="line-text"><span>Teste</span></div>
+                <div class="line-text">
+                    <span>
+                        February 13, 2022
+                        <div><strong>By</strong> Keany Reeves</div>
+                    </span>
+                </div>
                 <h1>consectetur adipiscing elit. Nam porta porttitor augue rhoncus pulvinar. In commodo</h1>
                 <p>"Nunc mi mi, lobortis sed blandit ut, finibus vitae lorem. Donec venenatis nibh id augue rutrum sodales. Phasellus ac eleifend tellus. Morbi efficitur enim et arcu commodo porta. Donec non sapien ornare sapien dictum venenatis. Mauris ultricies at ligula ut posuere. Quisque velit diam, tincidunt iaculis faucibus et, condimentum sit amet tellus. Proin hendrerit sollicitudin sodales."</p>
                 <img src="images/singlepostcar.png" alt="" srcset="">
@@ -103,8 +120,59 @@
             </article>
             <!-- Single Post end -->
 
-            <!-- <div class="line-text"><span>Related News</span></div> -->
-
+            <!-- Related Posts -->
+            <div class="line-text"><span>Related News</span></div>
+            <section class="posts">
+                <article class="post">
+                    <div class="post__image-container">
+                        <img src="images/singlepostcar.png" alt="">
+                        <button class="btn catg" style="background: #A60115;">Auto</button>
+                    </div>
+                    <div class="post__content">
+                        <time class="publish-date" datetime="2023-11-27"><i class="fa-solid fa-calendar-days" title="November 27th, 2023"></i>11/27/2023</time> 
+                        <address class="author"><i class="fa-solid fa-user"></i><a href="#">Billie Kimba</a></address>
+                        <a class="post__link" href="#"></a>
+                        <h3>Best of the wheels, can you believe that?</h3>
+                    </div>
+                </article>
+                <article class="post">
+                    <div class="post__image-container">
+                        <img src="images/singlepostcar.png" alt="">
+                        <button class="btn catg">Racing</button>
+                    </div>
+                    <div class="post__content">
+                        <time class="publish-date" datetime="2023-11-27"><i class="fa-solid fa-calendar-days" title="November 27th, 2023"></i>11/27/2023</time> 
+                        <address class="author"><i class="fa-solid fa-user"></i><a href="#">Billie Kimba</a></address>
+                        <a class="post__link" href="#"></a>
+                        <h3>Best of the wheels, can you believe that?</h3>
+                    </div>
+                </article>
+                <article class="post">
+                    <div class="post__image-container">
+                        <img src="images/singlepostcar.png" alt="">
+                        <button class="btn catg" style="background: #0CD651;">Sports</button>
+                    </div>
+                    <div class="post__content">
+                        <time class="publish-date" datetime="2023-11-27"><i class="fa-solid fa-calendar-days" title="November 27th, 2023"></i>11/27/2023</time> 
+                        <address class="author"><i class="fa-solid fa-user"></i><a href="#">Billie Kimba</a></address>
+                        <a class="post__link" href="#"></a>
+                        <h3>Best of the wheels, can you believe that?</h3>
+                    </div>
+                </article>
+                <article class="post">
+                    <div class="post__image-container">
+                        <img src="images/singlepostcar.png" alt="">
+                        <button class="btn catg" style="background: #0C99D6;">Entertainment</button>
+                    </div>
+                    <div class="post__content">
+                        <time class="publish-date" datetime="2023-11-27"><i class="fa-solid fa-calendar-days" title="November 27th, 2023"></i>11/27/2023</time> 
+                        <address class="author"><i class="fa-solid fa-user"></i><a href="#">Billie Kimba</a></address>
+                        <a class="post__link" href="#"></a>
+                        <h3>Best of the wheels, can you believe that?</h3>
+                    </div>
+                </article>
+            </section>
+            <!-- Related Posts end -->
 
         </div>
     </main>
